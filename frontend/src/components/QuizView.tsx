@@ -5,7 +5,7 @@ import type { Quiz } from '@/types'
 export default function QuizView({ data }: { data: Quiz }) {
   const questions = data.questions
   const [answers, setAnswers] = useState<(number | null)[]>(Array(questions.length).fill(null))
-  const [showResults, setShowResults] = useState(false)
+  const [setShowResults] = useState(false)
 
   const allAnswered = answers.every(a => a !== null)
   const score = answers.filter((a, i) => a === questions[i].correct).length
