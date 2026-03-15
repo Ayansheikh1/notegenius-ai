@@ -1,0 +1,22 @@
+{
+  "name": "notegenius-ai",
+  "version": "1.0.0",
+  "description": "AI Smart Notes & Lecture Summarizer - Hackathon Project",
+  "private": true,
+  "workspaces": [
+    "frontend",
+    "backend",
+    "infrastructure"
+  ],
+  "scripts": {
+    "dev": "cd frontend && npm run dev",
+    "build": "cd frontend && npm run build",
+    "deploy": "cd infrastructure && cdk deploy --all",
+    "bootstrap": "cd infrastructure && cdk bootstrap",
+    "test": "npm run test --workspaces",
+    "install:all": "npm install && cd frontend && npm install && cd ../backend && npm install && cd ../infrastructure && npm install"
+  },
+  "keywords": ["ai", "notes", "aws", "react", "hackathon"],
+  "author": "NoteGenius Team",
+  "license": "MIT"
+}
